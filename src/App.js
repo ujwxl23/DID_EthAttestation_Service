@@ -1,23 +1,16 @@
-import logo from './logo.svg';
 import './App.css';
+import EASFormOffChain from './components/EASFormOffChain';
+import EASForm from './components/EASForm';
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div className="bg-black h-screen flex flex-col items-center justify-center text-white">
+      <h1 className="text-4xl mb-8">Receive Attested Certificate</h1>
+      <EASForm/>
+      <br/>
+      <br/>
+      <h2 className="text-4xl mb-8">Verify Offchain attestation</h2>
+      <EASFormOffChain/>
     </div>
   );
 }
